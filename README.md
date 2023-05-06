@@ -27,13 +27,13 @@ After your submission has been reviewed by the Quill team, you will receive poin
 
 ## Challenges:
 
-| Challenge                                                                                            | Type              | Difficulty | Points | Solutions     |
-| ---------------------------------------------------------------------------------------------------- | ----------------- | ---------- | ------ | ------------- |
-| [🎲 PseudoRandom](https://academy.quillaudits.com/challenges/quillctf-challenges/pseudorandom)       | Solidity Security | Easy       | 100    | _Coming Soon_ |
-| [📈 Invest Pool](https://academy.quillaudits.com/challenges/quillctf-challenges/invest-pool)         | DeFi Security     | Medium     | 200    | _Coming Soon_ |
-| [🙈 Predictable NFT](https://academy.quillaudits.com/challenges/quillctf-challenges/predictable-nft) | Solidity Security | Easy       | 100    | _Coming Soon_ |
-| [📇 Voting Machine](https://academy.quillaudits.com/challenges/quillctf-challenges/voting-machine)   | DeFi Security     | Medium     | 200    | _Coming Soon_ |
-| [🕺 Private Club](https://academy.quillaudits.com/challenges/quillctf-challenges/private-club)       | DeFi Security     | Easy       | 100    | _Coming Soon_ |
+| Challenge                                                                                            | Type              | Difficulty | Points | Solutions                                                                                |
+| ---------------------------------------------------------------------------------------------------- | ----------------- | ---------- | ------ | ---------------------------------------------------------------------------------------- |
+| [🎲 PseudoRandom](https://academy.quillaudits.com/challenges/quillctf-challenges/pseudorandom)       | Solidity Security | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PseudoRandom/PseudoRandom.md) |
+| [📈 Invest Pool](https://academy.quillaudits.com/challenges/quillctf-challenges/invest-pool)         | DeFi Security     | Medium     | 200    | _Coming Soon_                                                                            |
+| [🙈 Predictable NFT](https://academy.quillaudits.com/challenges/quillctf-challenges/predictable-nft) | Solidity Security | Easy       | 100    | _Coming Soon_                                                                            |
+| [📇 Voting Machine](https://academy.quillaudits.com/challenges/quillctf-challenges/voting-machine)   | DeFi Security     | Medium     | 200    | _Coming Soon_                                                                            |
+| [🕺 Private Club](https://academy.quillaudits.com/challenges/quillctf-challenges/private-club)       | DeFi Security     | Easy       | 100    | _Coming Soon_                                                                            |
 
 # Getting Started
 
