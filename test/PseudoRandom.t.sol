@@ -3,7 +3,6 @@ pragma solidity ^0.8.17;
 
 import "forge-std/Test.sol";
 import "../src/PseudoRandom/PseudoRandom.sol";
-import "../src/PseudoRandom/AttackPseudoRandom.sol";
 
 contract PseudoRandomTest is Test {
     string private BSC_RPC = "https://rpc.ankr.com/bsc"; // 56
