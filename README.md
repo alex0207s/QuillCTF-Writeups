@@ -32,8 +32,8 @@ After your submission has been reviewed by the Quill team, you will receive poin
 | [🎲 PseudoRandom](https://academy.quillaudits.com/challenges/quillctf-challenges/pseudorandom)       | Solidity Security | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PseudoRandom/PseudoRandom.md)     |
 | [📈 Invest Pool](https://academy.quillaudits.com/challenges/quillctf-challenges/invest-pool)         | DeFi Security     | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/InvestPool/InvestPool.md)         |
 | [🙈 Predictable NFT](https://academy.quillaudits.com/challenges/quillctf-challenges/predictable-nft) | Solidity Security | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PredictableNFT/PredictableNFT.md) |
-| [📇 Voting Machine](https://academy.quillaudits.com/challenges/quillctf-challenges/voting-machine)   | DeFi Security     | Medium     | 200    | _Coming Soon_                                                                                |
-| [🕺 Private Club](https://academy.quillaudits.com/challenges/quillctf-challenges/private-club)       | DeFi Security     | Easy       | 100    | _Coming Soon_                                                                                |
+| [📇 Voting Machine](https://academy.quillaudits.com/challenges/quillctf-challenges/voting-machine)   | DeFi Security     | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/VotingMachine/VotingMachine.md)   |
+| [🕺 Private Club](https://academy.quillaudits.com/challenges/quillctf-challenges/private-club)       | DeFi Security     | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PrivateClub/PrivateClub.md)       |
 
 # Getting Started
 
@@ -44,19 +44,22 @@ curl -L https://foundry.paradigm.xyz | bash
 foundryup
 ```
 
-## Clone repo
+## Clone This Repo and install dependencies
 
 ```sh
 git clone git@github.com:alex0207s/QuillCTF.git
-forge install
 cd QuillCTF
+forge install
 ```
 
 ## Run Test
 
 ```sh
-forge test --match-contract {contract} -vvvv
+forge test --match-contract {contract} -vvv
 ```
+
+- Replace {contract} with the actual name of the contract
+- The more 'v' characters you include, the more verbose the output becomes (up to 5 'v').
 
 # Disclaimer
 
