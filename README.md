@@ -34,6 +34,8 @@ After your submission has been reviewed by the Quill team, you will receive poin
 | [🙈 Predictable NFT](https://academy.quillaudits.com/challenges/quillctf-challenges/predictable-nft) | Solidity Security | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PredictableNFT/PredictableNFT.md) |
 | [📇 Voting Machine](https://academy.quillaudits.com/challenges/quillctf-challenges/voting-machine)   | DeFi Security     | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/VotingMachine/VotingMachine.md)   |
 | [🕺 Private Club](https://academy.quillaudits.com/challenges/quillctf-challenges/private-club)       | DeFi Security     | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PrivateClub/PrivateClub.md)       |
+| [💥 Lottery](https://quillctf.super.site/challenges/quillctf-challenges/lottery)                     | EVM               | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/Lottery/Lottery.md)               |
+| [🔑 KeyCraft](https://quillctf.super.site/challenges/quillctf-challenges/keycraft)                   | EVM               | Hard       | 300    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/KeyCraft/KeyCraft.md)             |
 
 # Getting Started
 
@@ -58,8 +60,8 @@ forge install
 forge test --match-contract {contract} -vvv
 ```
 
-- Replace {contract} with the actual name of the contract
-- The more 'v' characters you include, the more verbose the output becomes (up to 5 'v').
+-   Replace {contract} with the actual name of the contract
+-   The more 'v' characters you include, the more verbose the output becomes (up to 5 'v').
 
 # Disclaimer
 
