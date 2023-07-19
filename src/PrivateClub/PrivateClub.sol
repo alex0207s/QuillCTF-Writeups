@@ -5,28 +5,28 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 contract PrivateClub is ReentrancyGuard, Ownable {
-    uint private registerEndDate;
-    event setRegEndDate(uint registerEndDate);
-    event memberWithdrawevent(address member, address to, uint amount);
+    uint256 private registerEndDate;
+
+    event setRegEndDate(uint256 registerEndDate);
+    event memberWithdrawevent(address member, address to, uint256 amount);
+
     address[] public members_;
     mapping(address => bool) public members;
 
     receive() external payable {}
 
-    uint public membersCount;
+    uint256 public membersCount;
 
-    function setRegisterEndDate(uint _newRegisterEndDate) external onlyOwner {
+    function setRegisterEndDate(uint256 _newRegisterEndDate) external onlyOwner {
         registerEndDate = _newRegisterEndDate;
         emit setRegEndDate(registerEndDate);
     }
 
-    function becomeMember(
-        address[] calldata _members
-    ) external payable nonReentrant {
+    function becomeMember(address[] calldata _members) external payable nonReentrant {
         require(block.timestamp < registerEndDate, "registration closed");
         require(_members.length == membersCount, "wrong members length");
         require(msg.value == membersCount * 1 ether, "need more ethers");
-        for (uint i = 0; i < _members.length; i++) {
+        for (uint256 i = 0; i < _members.length; i++) {
             _members[i].call{value: 1 ether}("");
         }
         membersCount += 1;
@@ -36,7 +36,7 @@ contract PrivateClub is ReentrancyGuard, Ownable {
 
     modifier onlyMember() {
         bool member;
-        for (uint i = 0; i < membersCount; i++) {
+        for (uint256 i = 0; i < membersCount; i++) {
             if (members_[i] == msg.sender) {
                 member = true;
             }
@@ -46,7 +46,7 @@ contract PrivateClub is ReentrancyGuard, Ownable {
         _;
     }
 
-    function adminWithdraw(address to, uint amount) external onlyOwner {
+    function adminWithdraw(address to, uint256 amount) external onlyOwner {
         payable(to).call{value: amount}("");
     }
 

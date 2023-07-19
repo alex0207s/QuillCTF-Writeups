@@ -1,18 +1,15 @@
 // SPDX-License-Identifier: MIT
 
-
 pragma solidity 0.8.19;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract KeyCraft is ERC721 {
-    uint totalSupply;
+    uint256 totalSupply;
     address owner;
     bool buyNFT;
 
-    constructor(string memory _name, string memory _symbol)
-        ERC721(_name, _symbol)
-    {
+    constructor(string memory _name, string memory _symbol) ERC721(_name, _symbol) {
         _mint(msg.sender, totalSupply++);
         owner = msg.sender;
     }
@@ -24,7 +21,7 @@ contract KeyCraft is ERC721 {
         if (msg.sender == owner) {
             buyNFT = true;
         } else {
-            uint a = uint160(uint256(keccak256(b)));
+            uint256 a = uint160(uint256(keccak256(b)));
             q = (address(uint160(a)) == msg.sender);
 
             a = a >> 108;
@@ -44,7 +41,7 @@ contract KeyCraft is ERC721 {
         _mint(msg.sender, totalSupply++);
     }
 
-    function burn(uint tok) public {
+    function burn(uint256 tok) public {
         address a = ownerOf(tok);
         require(msg.sender == a);
         _burn(tok);

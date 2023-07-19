@@ -22,9 +22,7 @@ contract PseudoRandomTest is Test {
         string memory rpc = new string(32);
         assembly {
             // network selection
-            let _rpc := sload(
-                add(mod(xor(number(), timestamp()), 0x06), BSC_RPC.slot)
-            )
+            let _rpc := sload(add(mod(xor(number(), timestamp()), 0x06), BSC_RPC.slot))
             mstore(rpc, shr(0x01, and(_rpc, 0xff)))
             mstore(add(rpc, 0x20), and(_rpc, not(0xff)))
         }
@@ -43,10 +41,10 @@ contract PseudoRandomTest is Test {
             location := add(chainid(), sload(addr.slot))
         }
 
-        // get the correct sig stored in the contract 
+        // get the correct sig stored in the contract
         (, bytes memory data) = instance.call(abi.encodePacked(hex"3bc5de30", location));
         (, data) = instance.call(abi.encodePacked(hex"3bc5de30", data));
-        
+
         // the data is a 32 bytes hex string with the correct sig in first 4 bytes
         // then we add arbitrary 16(= 4 + 12) bytes in front of the target addr
         (, data) = instance.call(abi.encodePacked(data, hex"12341234123412341234123412341234", addr));

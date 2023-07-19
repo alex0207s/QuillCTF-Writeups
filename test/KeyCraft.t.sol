@@ -30,13 +30,13 @@ contract KC is Test {
         vm.startPrank(attacker);
 
         //Solution
-        
+
         //we find a number to be hash that could pass the modifier `checkAddress`
-        
+
         // uint a;
         // for(uint256 i; i<100000; ++i) {
         //     a = uint160(uint256(keccak256(abi.encode(i))));
-            
+
         //     a = a >> 108;
         //     a = a << 240;
         //     a = a >> 240;

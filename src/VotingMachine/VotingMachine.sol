@@ -4,7 +4,6 @@ pragma solidity ^0.8.17;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract VoteToken is ERC20("Vote Token", "vToken") {
-
     address public owner;
 
     modifier onlyOwner() {
@@ -26,14 +25,12 @@ contract VoteToken is ERC20("Vote Token", "vToken") {
         _moveDelegates(_delegates[_from], address(0), _amount);
     }
 
-
     mapping(address => address) internal _delegates;
 
     struct Checkpoint {
         uint32 fromBlock;
         uint256 votes;
     }
-
 
     function _moveDelegates(address from, address to, uint256 amount) internal {
         if (from != to && amount > 0) {
@@ -64,7 +61,6 @@ contract VoteToken is ERC20("Vote Token", "vToken") {
         return _delegate(msg.sender, _addr);
     }
 
-
     function getVotes(address _addr) external view returns (uint256) {
         uint32 nCheckpoints = numCheckpoints[_addr];
         return nCheckpoints > 0 ? checkpoints[_addr][nCheckpoints - 1].votes : 0;
@@ -76,7 +72,6 @@ contract VoteToken is ERC20("Vote Token", "vToken") {
         _delegates[_addr] = delegatee;
         _moveDelegates(currentDelegate, delegatee, _addrBalance);
     }
-
 
     function _writeCheckpoint(address delegatee, uint32 nCheckpoints, uint256 oldVotes, uint256 newVotes) internal {
         uint32 blockNumber = uint32(block.number);

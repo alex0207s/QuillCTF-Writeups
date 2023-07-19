@@ -6,9 +6,9 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract InvestPool {
     IERC20 token;
-    uint totalShares;
+    uint256 totalShares;
     bool initialized;
-    mapping(address => uint) public balance;
+    mapping(address => uint256) public balance;
 
     modifier onlyInitializing() {
         require(initialized, "Not initialized! You are so stupid!");
@@ -25,33 +25,32 @@ contract InvestPool {
         // Hint: Password length is more than 30 chars
         require(!initialized, "Already initialized");
         require(
-            keccak256(abi.encode(password)) ==
-                0x18617c163efe81229b8520efdba6384eb5c6d504047da674138c760e54c4e1fd,
+            keccak256(abi.encode(password)) == 0x18617c163efe81229b8520efdba6384eb5c6d504047da674138c760e54c4e1fd,
             "Wrong password"
         );
         initialized = true;
     }
 
-    function deposit(uint amount) external onlyInitializing {
-        uint userShares = tokenToShares(amount);
+    function deposit(uint256 amount) external onlyInitializing {
+        uint256 userShares = tokenToShares(amount);
         balance[msg.sender] += userShares;
         totalShares += userShares;
         token.transferFrom(msg.sender, address(this), amount);
     }
 
-    function tokenToShares(uint userAmount) public view returns (uint) {
-        uint tokenBalance = token.balanceOf(address(this));
+    function tokenToShares(uint256 userAmount) public view returns (uint256) {
+        uint256 tokenBalance = token.balanceOf(address(this));
         if (tokenBalance == 0) return userAmount;
         return (userAmount * totalShares) / tokenBalance;
     }
 
-    function sharesToToken(uint amount) public view returns (uint) {
-        uint tokenBalance = token.balanceOf(address(this));
+    function sharesToToken(uint256 amount) public view returns (uint256) {
+        uint256 tokenBalance = token.balanceOf(address(this));
         return (amount * tokenBalance) / totalShares;
     }
 
-    function transferFromShare(uint amount, address from) public {
-        uint size;
+    function transferFromShare(uint256 amount, address from) public {
+        uint256 size;
         assembly {
             size := extcodesize(address())
         }
@@ -62,8 +61,8 @@ contract InvestPool {
     }
 
     function withdrawAll() external onlyInitializing {
-        uint shares = balance[msg.sender];
-        uint toWithdraw = sharesToToken(shares);
+        uint256 shares = balance[msg.sender];
+        uint256 toWithdraw = sharesToToken(shares);
         balance[msg.sender] = 0;
         totalShares -= shares;
         token.transfer(msg.sender, toWithdraw);

