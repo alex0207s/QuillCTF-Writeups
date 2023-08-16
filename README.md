@@ -27,15 +27,16 @@ After your submission has been reviewed by the Quill team, you will receive poin
 
 ## Challenges:
 
-| Challenge                                                                                            | Type              | Difficulty | Points | Solutions                                                                                    |
-| ---------------------------------------------------------------------------------------------------- | ----------------- | ---------- | ------ | -------------------------------------------------------------------------------------------- |
-| [🎲 PseudoRandom](https://academy.quillaudits.com/challenges/quillctf-challenges/pseudorandom)       | Solidity Security | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PseudoRandom/PseudoRandom.md)     |
-| [📈 Invest Pool](https://academy.quillaudits.com/challenges/quillctf-challenges/invest-pool)         | DeFi Security     | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/InvestPool/InvestPool.md)         |
-| [🙈 Predictable NFT](https://academy.quillaudits.com/challenges/quillctf-challenges/predictable-nft) | Solidity Security | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PredictableNFT/PredictableNFT.md) |
-| [📇 Voting Machine](https://academy.quillaudits.com/challenges/quillctf-challenges/voting-machine)   | DeFi Security     | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/VotingMachine/VotingMachine.md)   |
-| [🕺 Private Club](https://academy.quillaudits.com/challenges/quillctf-challenges/private-club)       | DeFi Security     | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PrivateClub/PrivateClub.md)       |
-| [💥 Lottery](https://quillctf.super.site/challenges/quillctf-challenges/lottery)                     | EVM               | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/Lottery/Lottery.md)               |
-| [🔑 KeyCraft](https://quillctf.super.site/challenges/quillctf-challenges/keycraft)                   | EVM               | Hard       | 300    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/KeyCraft/KeyCraft.md)             |
+| Challenge                                                                                             | Type              | Difficulty | Points | Solutions                                                                                                   |
+| ----------------------------------------------------------------------------------------------------- | ----------------- | ---------- | ------ | ----------------------------------------------------------------------------------------------------------- |
+| [🎲 PseudoRandom](https://academy.quillaudits.com/challenges/quillctf-challenges/pseudorandom)        | Solidity Security | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PseudoRandom/PseudoRandom.md)                    |
+| [📈 Invest Pool](https://academy.quillaudits.com/challenges/quillctf-challenges/invest-pool)          | DeFi Security     | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/InvestPool/InvestPool.md)                        |
+| [🙈 Predictable NFT](https://academy.quillaudits.com/challenges/quillctf-challenges/predictable-nft)  | Solidity Security | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PredictableNFT/PredictableNFT.md)                |
+| [📇 Voting Machine](https://academy.quillaudits.com/challenges/quillctf-challenges/voting-machine)    | DeFi Security     | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/VotingMachine/VotingMachine.md)                  |
+| [🕺 Private Club](https://academy.quillaudits.com/challenges/quillctf-challenges/private-club)        | DeFi Security     | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/PrivateClub/PrivateClub.md)                      |
+| [💥 Lottery](https://quillctf.super.site/challenges/quillctf-challenges/lottery)                      | EVM               | Medium     | 200    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/Lottery/Lottery.md)                              |
+| [🔑 KeyCraft](https://quillctf.super.site/challenges/quillctf-challenges/keycraft)                    | EVM               | Hard       | 300    | [Link](https://github.com/alex0207s/QuillCTF/blob/main/src/KeyCraft/KeyCraft.md)                            |
+| [📲 Temporary Variable](https://quillctf.super.site/challenges/quillctf-challenges/temporaryvariable) | Solidity Security | Easy       | 100    | [Link](https://github.com/alex0207s/QuillCTF-Writeups/blob/main/src/TemporaryVariable/TemporaryVariable.md) |
 
 # Getting Started
 
